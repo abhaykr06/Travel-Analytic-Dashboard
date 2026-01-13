@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Intelligence Dashboard</title>
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #181818">
+    
+
+    <header class="app-header">
+      <div class="header-content">
+      <h1>Hello Traveller</h1>
+      <p>Find info to your destiny here.</p>
+      </div>
+    </header>
+
+
+    <section class="search-section">
+    <div class="search-controls">
+    
+    <!-- REGION DROPDOWN -->
+    <select class="region-select">
+      <option value="all">All Regions</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+
+    <!-- SEARCH INPUT -->
+    <div class="search-input-wrapper">
+      <input type="text" id="input" placeholder="Search for a country..."/>
+    </div>
+
+  </div>
+
+  <!-- HELPER TEXT -->
+  <p class="search-helper">
+    Search a country to get travel insights in one place.
+  </p>
+</section>
+
+
+<section class="country-section">
+  <div id="empty-state" class="empty-state">
+  <h2>🌍 Start Exploring</h2>
+  <p>Search for a country to see travel insights like visa, cost, food, and best time.</p>
+</div>
+  <div id="data-container" class="country-card">
+
+    <!-- LEFT: FLAG -->
+    <div class="country-flag">
+      <img id="country-flag" src="" alt="Country Flag" />
+      <span>• National Flag</span>
+    </div>
+
+    <!-- RIGHT: DETAILS -->
+    <div class="country-details">
+
+      <h2 id="country-name" class="country-name">Country Name</h2>
+      <div class="country-divider"></div>
+      <div class="info-grid">
+        <div class="info-column">
+
+      <div class="info-block">
+        <h3>📍 Basics</h3>
+        <p><strong>Capital:</strong> <span id="country-capital"></span></p>
+        <p><strong>Region:</strong> <span id="country-region"></span></p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="info-block">
+        <h3>💰 Costs</h3>
+        <p id="country-cost"></p>
+        <p id="country-hotel"></p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="info-block">
+        <h3>🍽 Food</h3>
+        <p id="country-food"></p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="info-column">
+
+      <div class="info-block">
+        <h3>🛂 Visa</h3>
+        <p id="country-visa"></p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="info-block">
+        <h3>🌸 Best Time</h3>
+        <p id="country-besttime"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script type="module" src="./logic.js"></script>
+</body>
+</html>
